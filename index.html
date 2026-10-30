@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya R — Product Designer</title>
+  <meta name="description" content="Shreya R — product designer with 4.5+ years across fintech, gaming and B2C. Memberships, onboarding and trading insights at FYERS." />
+  <meta name="theme-color" content="#f7f7f5" />
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Shreya R — home">
+      <span class="nav__avatar" aria-hidden="true">SR</span>
+      <span class="nav__name">Shreya R</span>
+    </a>
+    <nav class="nav__tabs" aria-label="Primary">
+      <span class="nav__pill" aria-hidden="true"></span>
+      <a href="#home" class="is-active" aria-current="true">Home</a>
+      <a href="#work">Projects</a>
+      <a href="#about">About<span class="nav__long"> me</span></a>
+    </nav>
+    <a class="nav__resume" href="https://drive.google.com/file/d/1bgh8Nef4t42Xf_6Ved0tOeXRxqjm5tXZ/view?usp=sharing" target="_blank" rel="noopener">
+      Resume
+    </a>
+  </header>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero__dots" id="dots" aria-hidden="true"></canvas>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          <span class="line"><span style="--d:.1s">I design products</span></span>
+          <span class="line"><span style="--d:.2s">people trust with</span></span>
+          <span class="line"><span style="--d:.3s">their <em>money</em>.</span></span>
+        </h1>
+
+        <p class="hero__sub fade" style="--d:.45s">
+          4.5+ years designing for fintech, gaming and B2C — products used by <b>1M+ people</b>.
+        </p>
+
+        <div class="hero__actions fade" style="--d:.55s">
+          <a href="#work" class="btn btn--primary" data-magnetic>
+            View projects
+            <span class="btn__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg>
+            </span>
+          </a>
+          <button type="button" class="btn btn--ghost copy" data-copy="rshreya.design@gmail.com" aria-label="Copy email address">
+            <span class="copy__swap">
+              <span class="copy__label">rshreya.design@gmail.com</span>
+              <span class="copy__done">Copied</span>
+            </span>
+            <svg class="copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="2"/><path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="hero__right fade" style="--d:.35s">
+        <div class="badge" id="badge" tabindex="0" role="img" aria-label="ID card — Shreya R, Product Designer 2 at FYERS Securities">
+          <span class="badge__strap" aria-hidden="true"></span>
+          <span class="badge__clip" aria-hidden="true"></span>
+
+          <div class="badge__card">
+            <!-- Front -->
+            <div class="badge__face badge__face--front">
+              <div class="badge__brand">
+                <span class="badge__logo" aria-hidden="true">F</span>
+                <span class="mock-label">FYERS Securities</span>
+              </div>
+              <div class="badge__photo">
+                <img src="img/avatar.png" alt="" loading="lazy" />
+              </div>
+              <div class="badge__id">
+                <strong>Shreya R</strong>
+                <span class="mock-label">Bengaluru, IN</span>
+              </div>
+              <span class="badge__hint">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 0 1 10 0M13 8a5 5 0 0 1-10 0"/><path d="M11.5 3.5 13 8l-1.5.5M4.5 12.5 3 8l1.5-.5"/></svg>
+                Hover to flip
+              </span>
+            </div>
+
+            <!-- Back -->
+            <div class="badge__face badge__face--back">
+              <div class="badge__brand">
+                <span class="mock-label">Designation</span>
+              </div>
+              <strong class="badge__role">Product Designer 2</strong>
+              <ul class="badge__meta">
+                <li><span>Company</span><b>FYERS Securities</b></li>
+              </ul>
+              <span class="badge__barcode" aria-hidden="true"></span>
+              <span class="badge__sign">Shreya R</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__bottom fade" style="--d:.8s">
+      <ol class="rail" aria-label="Work history">
+        <li>
+          <span class="rail__dot" aria-hidden="true"></span>
+          <span class="rail__year">2021 — 2022</span>
+          <span class="rail__co">AthrV-Ed</span>
+          <span class="rail__role">UI/UX Intern</span>
+        </li>
+        <li>
+          <span class="rail__dot" aria-hidden="true"></span>
+          <span class="rail__year">2022 — 2023</span>
+          <span class="rail__co">Khelgully Gaming</span>
+          <span class="rail__role">Product Designer</span>
+        </li>
+        <li class="is-now">
+          <span class="rail__dot" aria-hidden="true"></span>
+          <span class="rail__year">2023 — Now<i class="rail__badge">Current</i></span>
+          <span class="rail__co">FYERS Securities</span>
+          <span class="rail__role">Product Designer 2</span>
+        </li>
+      </ol>
+      <span class="hero__clock">Bengaluru <time id="clock">--:--</time> IST</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SELECTED WORK ══════════════════════════ -->
+  <section class="work" id="work">
+    <div class="container">
+
+      <div class="work__head reveal-up">
+        <div>
+          <h2 class="work__title">Selected work</h2>
+        </div>
+      </div>
+
+      <div class="cards">
+
+        <!-- CARD 1 — FEATURED -->
+        <a href="case-fyers-prime.html" class="card card--feature reveal-up" style="--accent:#dcf53d; --ink:#4a5a00" data-cursor="Read case study">
+          <div class="card__visual">
+            <div class="layer layer--main" style="--depth:14">
+              <div class="mock prime">
+                <div class="prime__head">
+                  <div>
+                    <span class="mock-label">FYERS</span>
+                    <strong>Prime Membership</strong>
+                  </div>
+                  <span class="prime__badge" aria-hidden="true">
+                    <svg viewBox="0 0 16 16"><path d="M8 1.8 9.9 5.9l4.4.5-3.3 3 .9 4.4L8 11.6l-3.9 2.2.9-4.4-3.3-3 4.4-.5z"/></svg>
+                  </span>
+                </div>
+
+                <div class="prime__toggle" aria-hidden="true">
+                  <span class="prime__knob"></span>
+                  <span>Monthly</span><span>Yearly</span>
+                </div>
+
+                <div class="prime__plan">
+                  <div class="prime__price"><b>₹499</b><span>/ month</span></div>
+                  <span class="prime__save">Save 20%</span>
+                </div>
+
+                <ul class="prime__benefits">
+                  <li><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>₹10 brokerage per order</li>
+                  <li><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>Priority support, 24×7</li>
+                  <li><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>Research &amp; smart alerts</li>
+                </ul>
+
+                <div class="prime__cta">Activate Prime</div>
+              </div>
+            </div>
+
+            <div class="layer" style="--depth:32; top:9%; left:6%">
+              <div class="mock float float--stat">
+                <span class="mock-label">Brokerage</span>
+                <strong>₹0</strong>
+                <svg class="spark" viewBox="0 0 84 26" aria-hidden="true"><path pathLength="1" d="M2 22 L16 18 L28 19 L42 12 L56 11 L70 7 L82 3"/></svg>
+              </div>
+            </div>
+
+            <div class="layer" style="--depth:44; bottom:9%; right:6%">
+              <div class="mock float float--toast">
+                <span class="toast__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg></span>
+                <div>
+                  <strong>Prime activated</strong>
+                  <span class="mock-label">Benefits live instantly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__index">01</span>
+              <span>Fintech · Broking</span>
+              <span>Mobile &amp; Web</span>
+              <span>2025</span>
+            </div>
+            <h3 class="card__title">Prime Membership for FYERS</h3>
+            <p class="card__desc">A yearly membership for active traders — brokerage-free orders, higher limits and premium analytics. I designed it end to end: landing page, in-app nudges, checkout, and the benefits tracker members live in.</p>
+            <div class="card__foot">
+              <ul class="metrics">
+                <li><strong>₹0</strong><span>Brokerage on orders</span></li>
+                <li><strong data-count="1000">1,000</strong><span>Trades covered</span></li>
+                <li><strong data-count="7">7</strong><span>Modules gated</span></li>
+              </ul>
+              <span class="card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD 2 — TRADING INSIGHTS -->
+        <article class="card card--feature card--soon reveal-up" style="--d:.08s">
+          <div class="card__visual">
+            <div class="layer layer--main" style="--depth:12">
+              <div class="mock insights">
+                <div class="insights__head">
+                  <div>
+                    <span class="mock-label">FYERS · Trading Insights</span>
+                    <strong>Your month in trades</strong>
+                  </div>
+                  <span class="insights__chip">Jan 2025</span>
+                </div>
+
+                <div class="insights__stats">
+                  <div><span class="mock-label">Win rate</span><b>46%</b></div>
+                  <div><span class="mock-label">Net P&amp;L</span><b>+₹18,240</b></div>
+                </div>
+
+                <div class="insights__chart" aria-hidden="true">
+                  <i style="--h:46%"></i>
+                  <i class="is-loss" style="--h:28%"></i>
+                  <i style="--h:70%"></i>
+                  <i class="is-loss" style="--h:52%"></i>
+                  <i style="--h:38%"></i>
+                  <i class="is-loss" style="--h:84%"></i>
+                  <i style="--h:60%"></i>
+                  <i style="--h:34%"></i>
+                </div>
+
+                <div class="insights__tip">
+                  <span class="insights__bulb" aria-hidden="true">
+                    <svg viewBox="0 0 16 16"><path d="M8 2a4 4 0 0 0-2.4 7.2c.4.3.6.8.6 1.3V11h3.6v-.5c0-.5.2-1 .6-1.3A4 4 0 0 0 8 2ZM6.4 13.5h3.2"/></svg>
+                  </span>
+                  <div>
+                    <strong>You lose most when you average down</strong>
+                    <span class="mock-label">12 of 18 losing trades</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layer" style="--depth:34; top:11%; right:7%">
+              <div class="mock float float--stat">
+                <span class="mock-label">Monthly recap</span>
+                <strong>Jan</strong>
+                <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+            </div>
+            <div class="layer" style="--depth:24; bottom:12%; left:7%">
+              <div class="mock float float--pill"><span class="dot"></span>Reviewed 214 trades</div>
+            </div>
+          </div>
+
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__index">02</span>
+              <span>Fintech · Broking</span>
+              <span>Mobile &amp; Web</span>
+              <span>2025</span>
+            </div>
+            <h3 class="card__title">A journal shows what worked. Insights show what didn't.</h3>
+            <p class="card__desc">Trading Insights turns a month of orders into plain-language patterns — not just the wins, but the habits quietly costing traders money.</p>
+            <div class="card__foot">
+              <span class="soon">
+                <span class="soon__dot" aria-hidden="true"></span>
+                Case study coming soon
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 — ONBOARDING CONVERSION -->
+        <article class="card card--feature card--soon reveal-up" style="--d:.16s">
+          <div class="card__visual">
+            <div class="layer layer--main" style="--depth:12">
+              <div class="mock phone">
+                <span class="phone__notch"></span>
+                <div class="phone__progress"><i></i><i></i><i></i><i></i></div>
+                <span class="mock-label">Step 2 of 4 · 2 min left</span>
+                <p class="phone__q">Verify your PAN</p>
+                <div class="phone__field">ABCDE<b class="caret"></b></div>
+                <ul class="phone__steps">
+                  <li class="is-done"><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>Mobile &amp; email</li>
+                  <li class="is-doing"><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>PAN details</li>
+                  <li><i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></i>Bank &amp; signature</li>
+                </ul>
+                <div class="phone__cta">Continue</div>
+              </div>
+            </div>
+
+            <div class="layer" style="--depth:30; top:11%; left:7%">
+              <div class="mock float float--pill"><span class="dot"></span>Drop-off fixed at step 2</div>
+            </div>
+            <div class="layer" style="--depth:38; bottom:11%; right:7%">
+              <div class="mock float float--stat">
+                <span class="mock-label">Lead to PAN</span>
+                <strong>45.9%</strong>
+                <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__index">03</span>
+              <span>Fintech · Onboarding</span>
+              <span>Mobile &amp; Web</span>
+              <span>2023–25</span>
+            </div>
+            <h3 class="card__title">Rebuilding onboarding: 27.5% → 45.9% lead-to-PAN</h3>
+            <p class="card__desc">I rebuilt the end-to-end account opening journey around where people actually gave up — nearly doubling PAN conversion while holding 95%+ KYC approval. Earned the FYERS Force Award.</p>
+            <div class="card__foot">
+              <ul class="metrics">
+                <li><strong data-count="46" data-suffix="%">45.9%</strong><span>Lead to PAN</span></li>
+                <li><strong data-count="31" data-suffix="%">31%</strong><span>Lead to eSign</span></li>
+                <li><strong data-count="83" data-suffix="%">82.7%</strong><span>First trade</span></li>
+              </ul>
+              <span class="soon">
+                <span class="soon__dot" aria-hidden="true"></span>
+                Case study coming soon
+              </span>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- CARD 4 — KHELGULLY -->
+        <a href="https://medium.com/@shreyar18/khelgully-designing-an-engaging-experience-to-drive-quiz-ui-ux-case-study-fc293f592536" target="_blank" rel="noopener" class="card card--feature card--shot reveal-up" data-cursor="Read on Medium">
+          <div class="card__visual card__visual--shot">
+            <img src="img/khelgully.png" alt="Khelgully quiz experience" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__index">04</span>
+              <span>Gaming · Web &amp; Mobile</span>
+              <span>2022–23</span>
+            </div>
+            <h3 class="card__title">Khelgully — designing an engaging experience to drive quiz</h3>
+            <p class="card__desc">Core web and mobile experiences for a fantasy gaming platform, plus an onboarding and tournament redesign that pulled players back week after week.</p>
+            <div class="card__foot">
+              <ul class="metrics">
+                <li><strong data-count="40" data-prefix="+" data-suffix="%">+40%</strong><span>Session time</span></li>
+                <li><strong data-count="30" data-prefix="+" data-suffix="%">+30%</strong><span>Installs</span></li>
+                <li><strong data-count="30" data-suffix="×">30×</strong><span>Weekly tournaments</span></li>
+              </ul>
+              <span class="card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD 5 — CULT.FIT -->
+        <a href="https://bootcamp.uxdesign.cc/case-study-increasing-cult-fits-subscription-conversion-rate-in-48-hours-eb1a8e8a8b81" target="_blank" rel="noopener" class="card card--feature card--shot reveal-up" data-cursor="Read on UX Collective">
+          <div class="card__visual card__visual--shot">
+            <img src="img/cultfit.png" alt="Cult.fit subscription conversion case study" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__index">05</span>
+              <span>Self-initiated · B2C</span>
+              <span>48-hour study</span>
+            </div>
+            <h3 class="card__title">Increasing Cult.fit's subscription conversion rate</h3>
+            <p class="card__desc">A two-day teardown of a subscription funnel — finding where intent leaked away between the free trial and the paid plan, and redesigning that stretch.</p>
+            <div class="card__foot">
+              <ul class="metrics">
+                <li><strong>48 hrs</strong><span>End to end</span></li>
+                <li><strong>UX Collective</strong><span>Published</span></li>
+              </ul>
+              <span class="card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+                <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SIDE PROJECTS ══════════════════════════ -->
+  <section class="side" id="side">
+    <div class="container">
+
+      <div class="work__head reveal-up">
+        <div>
+          <h2 class="work__title">Side projects</h2>
+        </div>
+        <p class="work__intro">Things I build on my own time, usually because I wanted them to exist and nobody had made them yet.</p>
+      </div>
+
+      <div class="side__grid side__grid--one">
+
+        <a class="sp sp--wide reveal-up" href="https://am-i-underpaid.shreyar490.workers.dev/" target="_blank" rel="noopener" data-cursor="Try it">
+          <div class="sp__visual">
+            <span class="mock-label">Product Designer · Bangalore · 4.5 yrs</span>
+            <div class="sp__range" aria-hidden="true">
+              <span class="sp__fill"></span>
+              <span class="sp__marker"><b>You</b></span>
+            </div>
+            <div class="sp__scale" aria-hidden="true"><span>₹12L</span><span>₹28L</span><span>₹45L</span></div>
+            <div class="sp__verdict">Underpaid by ~18%</div>
+          </div>
+          <div class="sp__body">
+            <h3 class="sp__title">Am I Underpaid?</h3>
+            <p class="sp__desc">Salary talk is guesswork and screenshots. An AI-driven compensation benchmarking tool that helps tech professionals check pay parity — built at the Hermes Agent Buildathon with Codex and Hermes Agent.</p>
+            <ul class="sp__facts">
+              <li>Role, city and experience in three taps</li>
+              <li>Percentile view instead of a single number</li>
+              <li>Designed and built end to end, solo</li>
+            </ul>
+            <span class="sp__link">Try it live<span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EARLIER WORK ══════════════════════════ -->
+  <section class="earlier" id="writing">
+    <div class="container">
+
+      <div class="work__head reveal-up">
+        <div>
+          <p class="label">Writing</p>
+          <h2 class="work__title">Case studies &amp; writing</h2>
+        </div>
+        <p class="work__intro">Self-directed studies I wrote up along the way — the clearest look at how I pull a problem apart.</p>
+      </div>
+
+      <ul class="elist">
+        <li class="reveal-up" style="--d:.12s">
+          <a href="https://medium.com/@shreyar18/upselling-services-while-booking-the-hotel-in-the-tripadvisor-app-8d4d19a1f620" target="_blank" rel="noopener">
+            <span class="elist__num">01</span>
+            <span class="elist__main">
+              <strong>Upselling services while booking a hotel on TripAdvisor</strong>
+              <span class="elist__desc">Adding an upsell without wrecking the booking flow.</span>
+            </span>
+            <span class="elist__tag">Medium</span>
+            <span class="elist__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="reveal-up" style="--d:.18s">
+          <a href="https://shreyardesign.notion.site/An-attempt-to-increase-User-Retention-for-a-Grocery-App-that-offers-Baby-Care-Products-3b6c0ec020804f718cbd8c8e824566c6" target="_blank" rel="noopener">
+            <span class="elist__num">02</span>
+            <span class="elist__main">
+              <strong>Increasing user retention for a baby-care grocery app</strong>
+              <span class="elist__desc">Why parents stopped reordering, and what would bring them back.</span>
+            </span>
+            <span class="elist__tag">Notion</span>
+            <span class="elist__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ══════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+
+      <div class="about__side reveal-up">
+        <figure class="about__photo">
+          <img src="img/avatar.png" alt="Shreya R" loading="lazy" />
+        </figure>
+        <ul class="about__meta">
+          <li><span>Now</span><b>Product Designer 2, FYERS</b></li>
+          <li><span>Based in</span><b>Bengaluru, India</b></li>
+          <li><span>Studied</span><b>B.E. Electrical &amp; Electronics, NMAMIT</b></li>
+          <li><span>Certified</span><b>NISM VII, VIII &amp; XII</b></li>
+        </ul>
+      </div>
+
+      <div class="about__body reveal-up" style="--d:.08s">
+        <p class="label">About me</p>
+        <h2 class="about__title">Off the clock</h2>
+
+        <p class="about__lead">Happiest on a trail, a bike, or two feet from a net. Most weekends I'm somewhere outside Bengaluru, halfway up a climb, insisting the next ridge is the last one. It never is.</p>
+
+        <p>When I'm not trekking I'm on my bike, taking the long route for no particular reason. The rest of my free time goes to comics — reading far too many of them — and then drawing my own. Illustration is the part of design I do purely for myself, where nothing has to convert and no one reviews it.</p>
+
+        <p>I'm also annoyingly competitive about badminton and table tennis. If there's a court or a table nearby, I'll find it, and I'll want to keep playing well past when everyone else is done.</p>
+
+        <ul class="hobbies">
+          <li><span aria-hidden="true">🥾</span>Trekking</li>
+          <li><span aria-hidden="true">🏍️</span>Riding</li>
+          <li><span aria-hidden="true">📚</span>Comics</li>
+          <li><span aria-hidden="true">✏️</span>Illustration</li>
+          <li><span aria-hidden="true">🏸</span>Badminton</li>
+          <li><span aria-hidden="true">🏓</span>Table tennis</li>
+        </ul>
+
+        <h3 class="about__sub">Where I've worked</h3>
+        <ol class="xp">
+          <li>
+            <span class="xp__when">Apr 2025 — Present</span>
+            <div class="xp__what">
+              <strong>Product Designer 2 · FYERS Securities</strong>
+              <p>Own the membership experience end to end, plus a unified wealth tracker, holdings transfer, and growth work across the trading funnel.</p>
+            </div>
+          </li>
+          <li>
+            <span class="xp__when">Aug 2023 — Apr 2025</span>
+            <div class="xp__what">
+              <strong>UX Designer 2 · FYERS Securities</strong>
+              <p>Rebuilt onboarding end to end — lead-to-PAN from 27.5% to 45.9% — designed DDPI activation, and simplified order placement. FYERS Force Award.</p>
+            </div>
+          </li>
+          <li>
+            <span class="xp__when">Feb 2022 — Jul 2023</span>
+            <div class="xp__what">
+              <strong>Product Designer · Khelgully Gaming</strong>
+              <p>Core web and mobile experiences; onboarding and tournament redesign that grew weekly tournament activity 30×.</p>
+            </div>
+          </li>
+          <li>
+            <span class="xp__when">Sep 2021 — Feb 2022</span>
+            <div class="xp__what">
+              <strong>UI/UX Intern · AthrV-Ed</strong>
+              <p>Redesigned the AIC Nitte website and designed a web-based test-creation tool, from flows to final UI.</p>
+            </div>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container foot__inner">
+      <span>© 2026 Shreya R</span>
+      <nav class="foot__links" aria-label="Elsewhere">
+        <a href="mailto:rshreya.design@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/r-shreya" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://medium.com/@shreyar18" target="_blank" rel="noopener">Medium ↗</a>
+        <a href="https://twitter.com/__shreyar__" target="_blank" rel="noopener">Twitter ↗</a>
+        <a href="https://www.instagram.com/siireya.design/" target="_blank" rel="noopener">Instagram ↗</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Cursor label that follows the pointer over cards -->
+  <div class="cursor-chip" aria-hidden="true">
+    <span class="cursor-chip__inner">
+      <span class="cursor-chip__text">Read case study</span>
+      <svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg>
+    </span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime Membership for FYERS — Shreya R</title>
+  <meta name="description" content="Case study: designing Prime membership for FYERS — plan comparison, pricing and the upgrade flow." />
+  <meta name="theme-color" content="#f7f7f5" />
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body class="case-page">
+
+  <!-- Reading progress -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="index.html#home" class="nav__logo" aria-label="Shreya R — home">
+      <span class="nav__avatar" aria-hidden="true">SR</span>
+      <span class="nav__name">Shreya R</span>
+    </a>
+    <nav class="nav__tabs" aria-label="Primary">
+      <span class="nav__pill" aria-hidden="true"></span>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work" class="is-active" aria-current="true">Projects</a>
+      <a href="index.html#about">About<span class="nav__long"> me</span></a>
+    </nav>
+    <a class="nav__resume" href="https://drive.google.com/file/d/1bgh8Nef4t42Xf_6Ved0tOeXRxqjm5tXZ/view?usp=sharing" target="_blank" rel="noopener">
+      Resume
+    </a>
+  </header>
+
+  <!-- ═══════════════════════════ BANNER ═══════════════════════════ -->
+  <section class="banner">
+    <div class="banner__inner">
+      <p class="banner__eyebrow">FYERS · Prime Membership</p>
+      <h1 class="banner__title">Designing Prime Membership for FYERS</h1>
+      <p class="banner__sub">A yearly membership for active traders — brokerage-free orders, higher limits and premium analytics. Designed end to end, from the landing page to the benefits tracker.</p>
+    </div>
+    <figure class="banner__frame">
+      <span class="banner__ph">Cover image goes here<br /><b>cover.jpg</b> — 16:9 works best</span>
+    </figure>
+  </section>
+
+  <!-- ═══════════════════════════ CASE BODY ═══════════════════════════ -->
+  <div class="case container">
+
+    <aside class="case__side">
+      <a class="back" href="index.html#work">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+        Go back
+      </a>
+      <nav class="toc" id="toc" aria-label="Sections">
+        <a href="#overview" class="is-active">Overview</a>
+        <a href="#goals">Goals</a>
+        <a href="#context">Context</a>
+        <a href="#brief">The brief</a>
+        <a href="#failed">What failed</a>
+        <a href="#design">Final design</a>
+        <a href="#impact">Impact</a>
+        <a href="#next">Next steps</a>
+      </nav>
+    </aside>
+
+    <main class="case__body">
+
+      <section id="overview" class="sec">
+        <h2 class="sec__title">First, a little context</h2>
+
+        <h3>About FYERS</h3>
+        <p>FYERS is an Indian discount broker. People use it to trade equity, derivatives and mutual funds across web, mobile and the Trader terminal.</p>
+
+        <h3>Overview</h3>
+        <p>Internally the programme was called <b>FYERS First</b>. The brief from the growth team was one line: build a membership that keeps existing customers and brings new ones in. Everything else — what you get, what it costs, where people find it, what happens when they don't buy it — was open.</p>
+        <p>I owned the membership experience end to end: the public landing page, the nudges scattered across the product, the Prime pages inside the profile, the subscription journey, and the design of what sits behind the paywall for everyone who doesn't subscribe.</p>
+
+        <div class="split">
+          <div>
+            <h3>My role</h3>
+            <p>End-to-end product design — discovery, flows, UI, prototypes, and handoff across web and app. I worked from the PRD with the product owners and took the design decisions on scope, hierarchy and gating.</p>
+          </div>
+          <div>
+            <h3>Team</h3>
+            <ul class="people">
+              <li><b>Sanjeevini &amp; Abhimanyu</b> <span>Product owners</span></li>
+              <li><b>Growth</b> <span>Product stream</span></li>
+              <li><b>Web, App &amp; Backoffice</b> <span>Engineering</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <dl class="facts">
+          <div><dt>Role</dt><dd>Product Designer 2 — end-to-end</dd></div>
+          <div><dt>Platform</dt><dd>Web, App, Trader terminal</dd></div>
+          <div><dt>Scope</dt><dd>Marketing site → checkout → benefits</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+        </dl>
+      </section>
+
+      <section id="goals" class="sec">
+        <h2 class="sec__title">Goals</h2>
+        <ul class="list">
+          <li><b>Retention.</b> Give existing customers a reason to consolidate their trading on FYERS instead of splitting it across brokers.</li>
+          <li><b>Acquisition.</b> Make membership attractive enough that new customers subscribe within their first months.</li>
+          <li><b>Make the value legible.</b> Brokerage savings, higher limits and premium analytics are abstract until you see them against your own usage.</li>
+          <li><b>Keep the free tier honest.</b> Gate features without making the basic product feel broken or bait-and-switch.</li>
+        </ul>
+      </section>
+
+      <section id="context" class="sec">
+        <h2 class="sec__title">Context</h2>
+        <p>A discount broker makes money per order, so a membership is an odd fit: you're asking active traders to pay up front for cheaper trading later. The maths only works for people who trade often — and those are exactly the customers most likely to keep accounts at two or three brokers at once.</p>
+        <p>That framed the whole project. Prime had to read as <i>consolidate here and you come out ahead</i>, not as a toll gate on features people already had. Two numbers would tell us whether it landed: how many existing customers subscribed, and how many new customers subscribed within three months of opening an account.</p>
+        <blockquote class="quote">The membership had to pay for itself in the customer's head before they reached the payment screen.<cite>The design constraint</cite></blockquote>
+      </section>
+
+      <section id="brief" class="sec">
+        <h2 class="sec__title">The brief</h2>
+        <p>The PRD broke into five surfaces, each with its own design problem:</p>
+        <ul class="list">
+          <li><b>A public landing page</b> — what Prime is, the full feature list, a benefits comparison, yearly pricing, and discount handling. Three audiences on one page: guests, basic users and existing members, each needing a different call to action.</li>
+          <li><b>Touchpoints across the product</b> — banners and nudges wherever a Prime benefit is relevant: MTF, orders, options analytics, markets, menu, home. Each one needed a before-membership and an after-membership state.</li>
+          <li><b>Prime pages inside the profile</b> — one for people deciding, one for people who just paid, and one for members tracking what they've used: trades left out of their brokerage-free quota, upcoming webinars, partner subscriptions.</li>
+          <li><b>The subscription journey</b> — a single yearly plan for V1, GST-inclusive pricing, launch discounts, coupon codes, auto-renewal on by default, and a mandate created through the existing funds system.</li>
+          <li><b>Feature gating</b> — baskets, alerts, screeners, custom watchlists, AI prompts, options automations and three premium analytics reports, each with a limit for basic users and an overlay when they hit it.</li>
+        </ul>
+        <figure class="shot"><span>Add an image — the surface map or early flows</span></figure>
+      </section>
+
+      <section id="failed" class="sec">
+        <h2 class="sec__title">What was hard</h2>
+
+        <h3>Gating a product people already use</h3>
+        <p>The limits weren't theoretical: plenty of basic users already had more than ten custom watchlists or twenty-five saved screeners. Taking those away would have been a straight downgrade, so existing items had to be grandfathered and the limit applied only to new ones — and the overlay had to explain that difference in a sentence, at the moment someone hit it.</p>
+
+        <h3>Coupons versus mandates</h3>
+        <p>A coupon reduces what you pay today, but the auto-renewal mandate still has to be created for the full price so next year's renewal works. That mismatch is invisible to the business and alarming to a customer reading their bank's SMS. It needed saying plainly on the payment screen rather than hiding in the T&amp;Cs.</p>
+
+        <h3>No cancellation in V1</h3>
+        <p>The honest constraint: V1 shipped without an in-app cancel flow — subscriptions had to be managed through the payment platform or the bank. Designing a "Manage subscription" page that is upfront about that, instead of quietly omitting it, was the uncomfortable part.</p>
+        <div class="compare">
+          <figure class="shot shot--sm"><span>Before — limit hit, no context</span></figure>
+          <figure class="shot shot--sm"><span>After — limit with the upgrade path</span></figure>
+        </div>
+      </section>
+
+      <section id="design" class="sec">
+        <h2 class="sec__title">Final design</h2>
+        <p>The spine of the design is one idea: <b>show the benefit where the benefit applies.</b> Rather than one loud paywall, Prime appears as a contextual nudge at the moment a feature matters — and converts into a status cue once you're a member.</p>
+
+        <h3>Nudges that become badges</h3>
+        <p>Every touchpoint has two states. Before membership, a banner frames the specific saving in that context — brokerage-free orders where you place orders, a better MTF slab on the MTF screen. After membership, the same slot carries the Prime mark instead of a pitch, so the product stops selling and starts confirming.</p>
+        <figure class="shot shot--has-img">
+          <img src="img/prime-mobile.png" alt="Prime touchpoint banner on the MTF screen" loading="lazy" />
+        </figure>
+
+        <h3>Benefits you can watch yourself use</h3>
+        <p>The members' page isn't a feature list — it's a usage tracker. Trades used against the brokerage-free quota, partner subscriptions claimed, webinars coming up. The job of that page is to make the renewal decision obvious a year later, which means the value has to be visible monthly.</p>
+
+        <h3>One plan, no maths at checkout</h3>
+        <p>V1 deliberately ships a single yearly plan. Pricing is GST-inclusive, discounts show as a struck-through original, coupons apply inline, and the mandate amount is stated before you pay rather than discovered afterwards.</p>
+
+        <h3>A membership you can see</h3>
+        <p>The Prime mark sits next to the username with validity underneath, and members get an exclusive theme — which quietly reverts to the default when a subscription lapses. Support tickets carry the same badge, so priority routing is real rather than advertised.</p>
+        <figure class="shot"><span>Add an image — Prime landing page and benefits screens</span></figure>
+      </section>
+
+      <section id="impact" class="sec">
+        <h2 class="sec__title">Impact</h2>
+        <p>Prime is a net-new programme, so there was no baseline to beat. Success is tracked against two metrics from the PRD, plus the dashboards built alongside the launch:</p>
+        <ul class="list">
+          <li><b>Retention</b> — subscribers who were already FYERS customers.</li>
+          <li><b>Acquisition</b> — subscribers who joined within three months of opening an account.</li>
+          <li><b>Behaviour</b> — login frequency, order volume and feature usage before versus after subscribing, and how fast members work through their brokerage-free quota.</li>
+        </ul>
+        <p class="note">Live numbers land after launch — drop them in here once the first monthly review is out.</p>
+      </section>
+
+      <section id="next" class="sec">
+        <h2 class="sec__title">Next steps</h2>
+        <ul class="list">
+          <li>More than one plan, once there's data on who subscribes and what they actually use.</li>
+          <li>In-app subscription management and cancellation, closing the V1 gap.</li>
+          <li>More partner perks, with a cleaner claim flow than voucher codes.</li>
+          <li>Tuning each gate against the number of users who hit it daily — some limits will be too tight, some too generous.</li>
+        </ul>
+        <a class="btn btn--primary next-case" href="index.html#work">
+          Back to all projects
+          <span class="btn__arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg>
+          </span>
+        </a>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div class="container foot__inner">
+      <span>© 2026 Shreya R</span>
+      <nav class="foot__links" aria-label="Elsewhere">
+        <a href="mailto:rshreya.design@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/r-shreya" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://medium.com/@shreyar18" target="_blank" rel="noopener">Medium ↗</a>
+        <a href="https://twitter.com/__shreyar__" target="_blank" rel="noopener">Twitter ↗</a>
+        <a href="https://www.instagram.com/siireya.design/" target="_blank" rel="noopener">Instagram ↗</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="case.js"></script>
+</body>
+</html>

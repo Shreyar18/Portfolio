@@ -61,6 +61,13 @@
       <h1 class="banner__title">Designing Prime Membership for FYERS</h1>
       <p class="banner__sub">A yearly membership for active traders — brokerage-free orders, higher limits and premium analytics. Designed end to end, from the landing page to the benefits tracker.</p>
     </div>
+    <dl class="banner__facts">
+      <div><dt>Role</dt><dd>Product Designer — end to end</dd></div>
+      <div><dt>Platforms</dt><dd>Web, App, Trader</dd></div>
+      <div><dt>Year</dt><dd>2025</dd></div>
+      <div><dt>Status</dt><dd>Shipped</dd></div>
+    </dl>
+
     <figure class="banner__frame">
       <span class="banner__ph">Cover image goes here<br /><b>cover.jpg</b> — 16:9 works best</span>
     </figure>
@@ -75,138 +82,97 @@
         Go back
       </a>
       <nav class="toc" id="toc" aria-label="Sections">
-        <a href="#overview" class="is-active">Overview</a>
-        <a href="#goals">Goals</a>
+        <a href="#impact" class="is-active">Impact</a>
         <a href="#context">Context</a>
-        <a href="#brief">The brief</a>
-        <a href="#failed">What failed</a>
+        <a href="#iterations">Iterations</a>
+        <a href="#v1">First version</a>
         <a href="#design">Final design</a>
-        <a href="#impact">Impact</a>
+        <a href="#touchpoints">Touchpoints</a>
         <a href="#next">Next steps</a>
       </nav>
     </aside>
 
     <main class="case__body">
 
-      <section id="overview" class="sec">
-        <h2 class="sec__title">First, a little context</h2>
-
-        <h3>About FYERS</h3>
-        <p>FYERS is an Indian discount broker. People use it to trade equity, derivatives and mutual funds across web, mobile and the Trader terminal.</p>
-
-        <h3>Overview</h3>
-        <p>Internally the programme was called <b>FYERS First</b>. The brief from the growth team was one line: build a membership that keeps existing customers and brings new ones in. Everything else — what you get, what it costs, where people find it, what happens when they don't buy it — was open.</p>
-        <p>I owned the membership experience end to end: the public landing page, the nudges scattered across the product, the Prime pages inside the profile, the subscription journey, and the design of what sits behind the paywall for everyone who doesn't subscribe.</p>
-
-        <div class="split">
-          <div>
-            <h3>My role</h3>
-            <p>End-to-end product design — discovery, flows, UI, prototypes, and handoff across web and app. I worked from the PRD with the product owners and took the design decisions on scope, hierarchy and gating.</p>
-          </div>
-          <div>
-            <h3>Team</h3>
-            <ul class="people">
-              <li><b>Sanjeevini &amp; Abhimanyu</b> <span>Product owners</span></li>
-              <li><b>Growth</b> <span>Product stream</span></li>
-              <li><b>Web, App &amp; Backoffice</b> <span>Engineering</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <dl class="facts">
-          <div><dt>Role</dt><dd>Product Designer 2 — end-to-end</dd></div>
-          <div><dt>Platform</dt><dd>Web, App, Trader terminal</dd></div>
-          <div><dt>Scope</dt><dd>Marketing site → checkout → benefits</dd></div>
-          <div><dt>Year</dt><dd>2025</dd></div>
-        </dl>
-      </section>
-
-      <section id="goals" class="sec">
-        <h2 class="sec__title">Goals</h2>
-        <ul class="list">
-          <li><b>Retention.</b> Give existing customers a reason to consolidate their trading on FYERS instead of splitting it across brokers.</li>
-          <li><b>Acquisition.</b> Make membership attractive enough that new customers subscribe within their first months.</li>
-          <li><b>Make the value legible.</b> Brokerage savings, higher limits and premium analytics are abstract until you see them against your own usage.</li>
-          <li><b>Keep the free tier honest.</b> Gate features without making the basic product feel broken or bait-and-switch.</li>
+      <section id="impact" class="sec sec--lead">
+        <h2 class="sec__title">Impact</h2>
+        <ul class="outcomes">
+          <li><strong>—</strong><span>Members in first 30 days</span></li>
+          <li><strong>—</strong><span>From existing customers</span></li>
+          <li><strong>—</strong><span>From new accounts</span></li>
         </ul>
+        <p class="note">Numbers go here once the first review is out — tell me the figures and the window and I'll drop them in.</p>
       </section>
 
       <section id="context" class="sec">
         <h2 class="sec__title">Context</h2>
-        <p>A discount broker makes money per order, so a membership is an odd fit: you're asking active traders to pay up front for cheaper trading later. The maths only works for people who trade often — and those are exactly the customers most likely to keep accounts at two or three brokers at once.</p>
-        <p>That framed the whole project. Prime had to read as <i>consolidate here and you come out ahead</i>, not as a toll gate on features people already had. Two numbers would tell us whether it landed: how many existing customers subscribed, and how many new customers subscribed within three months of opening an account.</p>
-        <blockquote class="quote">The membership had to pay for itself in the customer's head before they reached the payment screen.<cite>The design constraint</cite></blockquote>
+
+        <h3>What Prime is</h3>
+        <p>FYERS Prime is a paid membership for people who trade often. Members get brokerage-free orders against a yearly quota, a better MTF slab, higher limits across the platform, premium options analytics, priority support, partner subscriptions and an exclusive theme.</p>
+
+        <h3>Why FYERS wanted it</h3>
+        <p>A discount broker earns per order, so asking active traders to pay up front for cheaper trading later is a strange proposition on paper. It works for exactly one group: people trading often enough that the maths pays for itself — and those are the same people most likely to keep accounts with two or three brokers at once.</p>
+        <p>That framed the whole programme. Prime had to read as <i>consolidate here and you come out ahead</i>, never as a toll gate on features people already had. The business goals were equally blunt: keep existing customers, and give new ones a reason to subscribe early.</p>
+
+        <h3>My role</h3>
+        <p>I owned the membership experience end to end — the public landing page, the nudges placed across the product, the Prime pages inside the profile, the subscription journey, and the design of what sits behind the paywall for everyone who doesn't subscribe. I worked from the PRD with the product owners and made the calls on scope, hierarchy and gating.</p>
       </section>
 
-      <section id="brief" class="sec">
-        <h2 class="sec__title">The brief</h2>
-        <p>The PRD broke into five surfaces, each with its own design problem:</p>
+      <section id="iterations" class="sec">
+        <h2 class="sec__title">Iterations</h2>
+
+        <h3>It started as FYERS One</h3>
+        <p>The first version of this programme wasn't called Prime. It was <b>FYERS One</b>, and it got as far as a full identity and a complete set of designs before the name had to change.</p>
+        <p>The problem was that the name was already taken: <b>FYERS One</b> meant something else in the product line. Shipping a paid membership under the same name would have left two different things competing for one word, in a product where people are moving money.</p>
+        <p>The rename wasn't only housekeeping. <b>One</b> reads as a tier — a plain membership level, the first rung of something. <b>Prime</b> is a word people already arrive knowing: it signals a bundle of perks, a members' club, something you join rather than something you're sorted into. For a programme whose whole job was to make a yearly fee feel like a good deal, the familiar word did work the invented one couldn't.</p>
+        <figure class="shot"><span>Add an image — FYERS One identity beside Prime</span></figure>
+
+        <h3>Perks that didn't make it</h3>
+        <p>Two benefits were designed and then cut before launch.</p>
         <ul class="list">
-          <li><b>A public landing page</b> — what Prime is, the full feature list, a benefits comparison, yearly pricing, and discount handling. Three audiences on one page: guests, basic users and existing members, each needing a different call to action.</li>
-          <li><b>Touchpoints across the product</b> — banners and nudges wherever a Prime benefit is relevant: MTF, orders, options analytics, markets, menu, home. Each one needed a before-membership and an after-membership state.</li>
-          <li><b>Prime pages inside the profile</b> — one for people deciding, one for people who just paid, and one for members tracking what they've used: trades left out of their brokerage-free quota, upcoming webinars, partner subscriptions.</li>
-          <li><b>The subscription journey</b> — a single yearly plan for V1, GST-inclusive pricing, launch discounts, coupon codes, auto-renewal on by default, and a mandate created through the existing funds system.</li>
-          <li><b>Feature gating</b> — baskets, alerts, screeners, custom watchlists, AI prompts, options automations and three premium analytics reports, each with a limit for basic users and an overlay when they hit it.</li>
+          <li><b>A partner subscription worth around ₹15,000</b> was cut once we looked at what including it would require of us. It was the most eye-catching number on the landing page, and still not worth what it asked in return.</li>
+          <li><b>A one-time one-month benefit</b> was dropped for a mix of reasons once we looked at how it would behave alongside the yearly plan.</li>
         </ul>
-        <figure class="shot"><span>Add an image — the surface map or early flows</span></figure>
+        <p>Both cost us headline value. Both were right — a membership people trust is worth more than one extra perk.</p>
       </section>
 
-      <section id="failed" class="sec">
-        <h2 class="sec__title">What was hard</h2>
-
-        <h3>Gating a product people already use</h3>
-        <p>The limits weren't theoretical: plenty of basic users already had more than ten custom watchlists or twenty-five saved screeners. Taking those away would have been a straight downgrade, so existing items had to be grandfathered and the limit applied only to new ones — and the overlay had to explain that difference in a sentence, at the moment someone hit it.</p>
-
-        <h3>Coupons versus mandates</h3>
-        <p>A coupon reduces what you pay today, but the auto-renewal mandate still has to be created for the full price so next year's renewal works. That mismatch is invisible to the business and alarming to a customer reading their bank's SMS. It needed saying plainly on the payment screen rather than hiding in the T&amp;Cs.</p>
-
-        <h3>No cancellation in V1</h3>
-        <p>The honest constraint: V1 shipped without an in-app cancel flow — subscriptions had to be managed through the payment platform or the bank. Designing a "Manage subscription" page that is upfront about that, instead of quietly omitting it, was the uncomfortable part.</p>
-        <div class="compare">
-          <figure class="shot shot--sm"><span>Before — limit hit, no context</span></figure>
-          <figure class="shot shot--sm"><span>After — limit with the upgrade path</span></figure>
-        </div>
+      <section id="v1" class="sec">
+        <h2 class="sec__title">The first version, and what was wrong with it</h2>
+        <p class="note">We're filling this in together, step by step — what v1 looked like, where it broke down, and what you changed because of it.</p>
+        <figure class="shot"><span>Add an image — the first version</span></figure>
       </section>
 
       <section id="design" class="sec">
         <h2 class="sec__title">Final design</h2>
-        <p>The spine of the design is one idea: <b>show the benefit where the benefit applies.</b> Rather than one loud paywall, Prime appears as a contextual nudge at the moment a feature matters — and converts into a status cue once you're a member.</p>
+        <p>The spine of the design is one idea: <b>show the benefit where the benefit applies.</b> Rather than one loud paywall, Prime appears as a contextual nudge at the moment a feature matters — and turns into a status cue once you're a member.</p>
 
-        <h3>Nudges that become badges</h3>
-        <p>Every touchpoint has two states. Before membership, a banner frames the specific saving in that context — brokerage-free orders where you place orders, a better MTF slab on the MTF screen. After membership, the same slot carries the Prime mark instead of a pitch, so the product stops selling and starts confirming.</p>
+        <h3>Benefits you can watch yourself use</h3>
+        <p>The members' page isn't a feature list, it's a usage tracker: trades used against the brokerage-free quota, partner subscriptions claimed, webinars coming up. Its real job is to make the renewal decision obvious a year later, which means the value has to stay visible month to month.</p>
+
+        <h3>One plan, no maths at checkout</h3>
+        <p>V1 deliberately ships a single yearly plan. Pricing is GST-inclusive, discounts show as a struck-through original, coupons apply inline, and the mandate amount is stated before you pay rather than discovered afterwards in a bank SMS.</p>
+
+        <h3>A membership you can see</h3>
+        <p>The Prime mark sits beside the username with validity underneath, and members get an exclusive theme that quietly reverts to default when a subscription lapses. Support tickets carry the same badge, so priority routing is real rather than advertised.</p>
+        <figure class="shot shot--tall"><span>Add an image — final screens</span></figure>
+      </section>
+
+      <section id="touchpoints" class="sec">
+        <h2 class="sec__title">Touchpoints</h2>
+        <p>Prime shows up across the product wherever one of its benefits is relevant — MTF, orders, options analytics, markets, home, menu. Every one of those places has two states: a pitch before you join, a confirmation after.</p>
+        <p>The rule I held to was that a nudge has to earn its spot by being specific. A generic "Upgrade to Prime" banner on the MTF screen is noise; <i>a better MTF slab, on the screen where you're using MTF</i> is information. Where I couldn't name the benefit in context, I left the placement out.</p>
         <figure class="shot shot--has-img">
           <img src="img/prime-mobile.png" alt="Prime touchpoint banner on the MTF screen" loading="lazy" />
         </figure>
-
-        <h3>Benefits you can watch yourself use</h3>
-        <p>The members' page isn't a feature list — it's a usage tracker. Trades used against the brokerage-free quota, partner subscriptions claimed, webinars coming up. The job of that page is to make the renewal decision obvious a year later, which means the value has to be visible monthly.</p>
-
-        <h3>One plan, no maths at checkout</h3>
-        <p>V1 deliberately ships a single yearly plan. Pricing is GST-inclusive, discounts show as a struck-through original, coupons apply inline, and the mandate amount is stated before you pay rather than discovered afterwards.</p>
-
-        <h3>A membership you can see</h3>
-        <p>The Prime mark sits next to the username with validity underneath, and members get an exclusive theme — which quietly reverts to the default when a subscription lapses. Support tickets carry the same badge, so priority routing is real rather than advertised.</p>
-        <figure class="shot"><span>Add an image — Prime landing page and benefits screens</span></figure>
-      </section>
-
-      <section id="impact" class="sec">
-        <h2 class="sec__title">Impact</h2>
-        <p>Prime is a net-new programme, so there was no baseline to beat. Success is tracked against two metrics from the PRD, plus the dashboards built alongside the launch:</p>
-        <ul class="list">
-          <li><b>Retention</b> — subscribers who were already FYERS customers.</li>
-          <li><b>Acquisition</b> — subscribers who joined within three months of opening an account.</li>
-          <li><b>Behaviour</b> — login frequency, order volume and feature usage before versus after subscribing, and how fast members work through their brokerage-free quota.</li>
-        </ul>
-        <p class="note">Live numbers land after launch — drop them in here once the first monthly review is out.</p>
+        <p>After membership, the same slots stop selling. The banner becomes the Prime mark, the locked reports open, the limits lift — the product stops asking and starts confirming.</p>
       </section>
 
       <section id="next" class="sec">
         <h2 class="sec__title">Next steps</h2>
         <ul class="list">
-          <li>More than one plan, once there's data on who subscribes and what they actually use.</li>
-          <li>In-app subscription management and cancellation, closing the V1 gap.</li>
-          <li>More partner perks, with a cleaner claim flow than voucher codes.</li>
-          <li>Tuning each gate against the number of users who hit it daily — some limits will be too tight, some too generous.</li>
+          <li><b>Monthly alongside yearly.</b> Today Prime is a single yearly subscription. Monthly lowers the barrier for traders who won't commit to a year up front.</li>
+          <li><b>A queue system</b>, so demand can be managed at launch moments rather than everything opening at once.</li>
+          <li><b>Direct payment</b>, cutting a step out of the current checkout.</li>
         </ul>
         <a class="btn btn--primary next-case" href="index.html#work">
           Back to all projects

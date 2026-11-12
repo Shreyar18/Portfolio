@@ -1,6 +1,23 @@
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 
+// ── Theme toggle ──────────────────────────────────────────────
+const themeBtn = document.getElementById('themeToggle');
+const currentTheme = () =>
+  document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+if (themeBtn) {
+  const sync = () => themeBtn.setAttribute('aria-pressed', String(currentTheme() === 'dark'));
+  sync();
+  themeBtn.addEventListener('click', () => {
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    if (next === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    else document.documentElement.removeAttribute('data-theme');
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+    window.dispatchEvent(new CustomEvent('themechange', { detail: next }));
+  });
+}
+
 // ── Hero intro ────────────────────────────────────────────────
 const hero = document.querySelector('.hero');
 const heroReady = () => hero?.classList.add('is-ready');
@@ -55,6 +72,15 @@ if (clock) {
 
   let dots = [];
   let W = 0, H = 0;
+  let dotColor = 'rgba(10,10,10,0.17)';
+  let dotRGB = '10, 10, 10';
+  function readTheme() {
+    const s = getComputedStyle(document.documentElement);
+    dotColor = (s.getPropertyValue('--dot') || dotColor).trim();
+    dotRGB = (s.getPropertyValue('--dot-rgb') || dotRGB).trim();
+  }
+  readTheme();
+  window.addEventListener('themechange', () => { readTheme(); draw(); });
   let running = false;
   let inView = true;
   const mouse = { x: 0, y: 0, tx: 0, ty: 0, power: 0, target: 0 };
@@ -140,7 +166,7 @@ if (clock) {
     ctx.clearRect(0, 0, W, H);
 
     // Resting dots in one batch
-    ctx.fillStyle = 'rgba(255,255,255,0.14)';
+    ctx.fillStyle = dotColor;
     ctx.beginPath();
     for (const d of dots) {
       if (d.glow < 0.03) {
@@ -150,13 +176,11 @@ if (clock) {
     }
     ctx.fill();
 
-    // Active dots: brighter, bigger, tinted indigo near the cursor
+    // Active dots: stronger and larger the closer the cursor gets
     for (const d of dots) {
       if (d.glow >= 0.03) {
         const g = Math.min(d.glow, 1);
-        const t = Math.max(0, (g - 0.3) / 0.7);
-        const r = Math.round(255 - 161 * t), gr = Math.round(255 - 149 * t), b = Math.round(255 - 45 * t);
-        ctx.fillStyle = `rgba(${r},${gr},${b},${0.14 + g * 0.86})`;
+        ctx.fillStyle = `rgba(${dotRGB},${(0.16 + g * 0.84).toFixed(3)})`;
         ctx.beginPath();
         ctx.arc(d.x, d.y, DOT + g * 1.7, 0, TAU);
         ctx.fill();

@@ -5,32 +5,35 @@
 .progress {
   position: fixed; inset: 0 0 auto; z-index: 60;
   height: 3px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--fill-2);
 }
 .progress span {
   display: block; height: 100%; width: 0;
-  background: linear-gradient(90deg, var(--brand), var(--brand-hi));
+  background: var(--brand);
   transform-origin: left;
   transition: width .12s linear;
 }
 
-/* ─── Banner ─── */
+/* ─── Banner — always the inverse of the page, in both themes ─── */
+:root { --banner-bg: #0c0d0f; --banner-text: #f7f8f8; --banner-muted: rgba(247, 248, 248, 0.66); }
+:root[data-theme="dark"] { --banner-bg: #141517; }
+
 .banner {
   position: relative;
   margin: 0 var(--gutter);
   padding: clamp(96px, 12vw, 150px) clamp(20px, 5vw, 72px) 0;
   border-radius: var(--r-xl);
   background:
-    radial-gradient(110% 80% at 50% -10%, rgba(94, 106, 210, 0.35), transparent 62%),
-    #0c0d0f;
+    radial-gradient(110% 80% at 50% -10%, var(--fill-2), transparent 62%),
+    var(--banner-bg);
   box-shadow: inset 0 0 0 1px var(--line-2);
-  color: #fff;
+  color: var(--on-brand);
   overflow: hidden;
   isolation: isolate;
 }
 .banner::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1.3px);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1.3px);
   background-size: 22px 22px;
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 20%, transparent 80%);
   mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 20%, transparent 80%);
@@ -41,7 +44,7 @@
   font: 500 12px/1 var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--banner-muted);
 }
 .banner__title {
   margin: 0;
@@ -55,7 +58,7 @@
   margin: clamp(18px, 2vw, 26px) auto 0;
   font-size: clamp(15px, 1.2vw, 17px);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.66);
+  color: var(--banner-muted);
 }
 .banner__frame {
   max-width: 1040px;
@@ -63,12 +66,12 @@
   aspect-ratio: 16 / 9;
   display: grid; place-items: center;
   border-radius: var(--r-lg) var(--r-lg) 0 0;
-  background: rgba(255, 255, 255, 0.035);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 -20px 60px -30px rgba(0, 0, 0, 0.8);
+  background: var(--fill);
+  box-shadow: inset 0 0 0 1px var(--line-2), 0 -20px 60px -30px rgba(0, 0, 0, 0.8);
   text-align: center;
 }
-.banner__ph { font: 500 12.5px/1.8 var(--mono); color: rgba(255, 255, 255, 0.5); padding: 20px; }
-.banner__ph b { color: #fff; }
+.banner__ph { font: 500 12.5px/1.8 var(--mono); color: var(--banner-muted); padding: 20px; }
+.banner__ph b { color: var(--banner-text); }
 
 /* ─── Layout: sticky side nav + body ─── */
 .case {
@@ -86,13 +89,13 @@
   margin-bottom: 20px;
   padding: 10px 16px 10px 13px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill);
   box-shadow: inset 0 0 0 1px var(--line-2);
   font-size: 13.5px; font-weight: 500;
   transition: background-color .3s, box-shadow .3s;
 }
 .back svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s var(--ease); }
-.back:hover { background: rgba(255, 255, 255, 0.08); box-shadow: inset 0 0 0 1px var(--line-3); }
+.back:hover { background: var(--fill-2); box-shadow: inset 0 0 0 1px var(--line-3); }
 .back:hover svg { transform: translateX(-3px); }
 
 .toc { display: flex; flex-direction: column; gap: 2px; }
@@ -173,12 +176,12 @@
   border-radius: var(--r-lg);
   background: var(--surface-2);
   box-shadow: inset 0 0 0 1px var(--line);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.3px);
+  background-image: radial-gradient(var(--fill-2) 1px, transparent 1.3px);
   background-size: 18px 18px;
 }
 .shot span {
   padding: 10px 16px; border-radius: 999px;
-  background: rgba(20, 21, 23, 0.9);
+  background: var(--glass);
   box-shadow: inset 0 0 0 1px var(--line-2);
   font: 500 12px/1 var(--mono); color: var(--muted);
 }
@@ -209,12 +212,12 @@
   .toc::-webkit-scrollbar { display: none; }
   .toc a {
     padding: 8px 13px; border-radius: 999px; white-space: nowrap;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--fill);
     box-shadow: inset 0 0 0 1px var(--line);
     font-size: 13.5px;
   }
   .toc a::before { display: none; }
-  .toc a.is-active { background: var(--brand); color: #fff; box-shadow: none; }
+  .toc a.is-active { background: var(--brand); color: var(--on-brand); box-shadow: none; }
   .case__side { position: sticky; top: 56px; z-index: 20; background: var(--bg); padding: 10px 0 8px; box-shadow: 0 10px 14px -12px rgba(0, 0, 0, 0.35); }
 }
 @media (max-width: 560px) {

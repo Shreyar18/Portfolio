@@ -14,6 +14,9 @@ if (themeBtn) {
     else document.documentElement.removeAttribute('data-theme');
     try { localStorage.setItem('theme', next); } catch (e) {}
     sync();
+    // Safari keeps stale paint behind blurred/negative-z layers — nudge a repaint
+    const shade = document.querySelector('.hero__shade');
+    if (shade) { shade.style.opacity = '0.999'; requestAnimationFrame(() => { shade.style.opacity = ''; }); }
     window.dispatchEvent(new CustomEvent('themechange', { detail: next }));
   });
 }

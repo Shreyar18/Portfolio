@@ -93,12 +93,8 @@
   color-scheme: dark;
 }
 
-/* Theme swap shouldn't flash — but never animate it for reduced-motion users */
-@media (prefers-reduced-motion: no-preference) {
-  body, .nav, .card, .sp, .badge__face, .float, .mock, .elist a::before {
-    transition: background-color .45s var(--ease), color .45s var(--ease), box-shadow .45s var(--ease);
-  }
-}
+/* Theme swaps instantly: animating large blurred/translucent layers leaves
+   stale paint in Safari. Small controls keep their own transitions. */
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -255,6 +251,7 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 .hero__shade {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  will-change: opacity;
   background:
     radial-gradient(ellipse 48% 40% at 24% 48%, var(--bg) 35%, transparent 75%),
     linear-gradient(to bottom, transparent 70%, var(--bg));

@@ -309,7 +309,7 @@ const countObs = new IntersectionObserver(entries => {
     countObs.unobserve(entry.target);
   });
 }, { threshold: 0.8 });
-document.querySelectorAll('.metrics, .hero__stats').forEach(el => countObs.observe(el));
+document.querySelectorAll('.metrics, .result, .hero__stats').forEach(el => countObs.observe(el));
 
 // ── Project cards: spotlight, parallax, cursor label ─────────
 (() => {

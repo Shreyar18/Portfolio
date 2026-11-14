@@ -508,7 +508,7 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 .work__intro { max-width: 36ch; margin: 0; color: var(--muted); line-height: 1.55; }
 
-.cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 
 .js .reveal-up { opacity: 0; transform: translateY(48px); }
 .js .reveal-up.is-in {
@@ -540,9 +540,14 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
   box-shadow: inset 0 0 0 1px var(--line-2), var(--shadow-lg);
 }
 .card--feature { grid-column: 1 / -1; flex-direction: row; }
-/* Stacked full-width cards alternate which side the mockup sits on */
-.cards .card:nth-child(even) { flex-direction: row-reverse; }
-.cards .card:nth-child(even) .card__body { padding: 40px 28px 32px 36px; }
+/* Full-width cards alternate which side the mockup sits on */
+.cards .card--feature:nth-child(even) { flex-direction: row-reverse; }
+.cards .card--feature:nth-child(even) .card__body { padding: 40px 28px 32px 36px; }
+/* The lead project gets more room than the rest */
+.card--feature.card--lead .card__visual { min-height: 580px; }
+.card--feature.card--lead .card__title { font-size: clamp(32px, 3.6vw, 52px); }
+/* Published articles sit side by side, below the case studies */
+.card--half .card__visual { min-height: 0; }
 
 /* Spotlight border that follows the pointer */
 .card::before {
@@ -616,9 +621,9 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 .card--feature .card__body { flex: 1 1 0; padding: 40px 36px 32px 28px; }
 
-.card__meta { display: flex; flex-wrap: wrap; gap: 6px; font: 500 12px/1 var(--mono); color: var(--muted); }
-.card__meta span { padding: 6px 9px; border-radius: var(--r-sm); box-shadow: inset 0 0 0 1px var(--line); }
-.card__meta .card__index { color: var(--brand-hi); background: var(--brand-soft); box-shadow: none; }
+/* Company · project · year as one quiet line */
+.card__meta { margin: 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.card__meta span + span::before { content: "·"; margin: 0 0.5em; }
 
 .card__title {
   margin: 6px 0 0;
@@ -645,6 +650,16 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 .metrics span { font: 500 11.5px/1.4 var(--mono); color: var(--muted); }
 .card:hover .metrics li:first-child strong { color: var(--brand-hi); }
+
+/* One result per card: the number, then what it means in plain words */
+.card__foot:has(.result) { flex-wrap: wrap; }
+.result { display: flex; align-items: baseline; gap: 10px; margin: 0; flex: 1 1 240px; }
+.result strong {
+  font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.result span { font-size: 15px; line-height: 1.4; color: var(--muted); }
+.card__cta { font-size: 15px; font-weight: 500; color: var(--text); }
 
 .card__arrow {
   flex: none; position: relative;
@@ -1037,7 +1052,6 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 .elist a:hover::before { opacity: 1; transform: none; }
 .elist a:hover { padding-left: clamp(18px, 2.2vw, 30px); }
-.elist__num { font: 500 12px/1 var(--mono); color: var(--muted); }
 .elist__main { flex: 1; min-width: 0; }
 .elist__main strong {
   display: block;
@@ -1397,17 +1411,6 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 
 
-.hobbies { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; padding: 0; list-style: none; }
-.hobbies li {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 9px 14px; border-radius: 999px;
-  background: var(--fill);
-  box-shadow: inset 0 0 0 1px var(--line-2);
-  font-size: 13.5px; font-weight: 500; color: var(--body);
-  transition: transform .4s var(--ease), background-color .3s, box-shadow .3s, color .3s;
-}
-.hobbies li span { font-size: 15px; line-height: 1; }
-.hobbies li:hover { transform: translateY(-3px); background: var(--fill-2); box-shadow: inset 0 0 0 1px var(--line-3); color: var(--text); }
 
 /* ═════════════════════════════ CURSOR CHIP ═════════════════════════════ */
 .cursor-chip { position: fixed; top: 0; left: 0; z-index: 80; pointer-events: none; will-change: transform; }
@@ -1444,10 +1447,14 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 }
 @media (max-width: 960px) {
   .card--feature,
-  .cards .card:nth-child(even) { flex-direction: column; }
-  .cards .card:nth-child(even) .card__body { padding: 24px 28px 28px; }
+  .cards .card--feature:nth-child(even) { flex-direction: column; }
+  .cards .card--feature:nth-child(even) .card__body { padding: 24px 28px 28px; }
   .card--feature .card__visual { flex: none; min-height: 420px; margin: 10px 10px 0; }
+  .card--feature.card--lead .card__visual { min-height: 480px; }
   .card--feature .card__body { padding: 24px 28px 28px; }
+}
+@media (max-width: 720px) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 560px) {
@@ -1475,6 +1482,8 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
   .float { --mock-scale: .8; }
   .metrics { gap: 10px 20px; }
   .metrics strong { font-size: 22px; }
+  .result { flex-direction: column; gap: 4px; }
+  .result strong { font-size: 26px; }
 }
 @media (max-width: 480px) {
   .nav { grid-template-columns: auto auto; gap: 8px; justify-content: space-between; }

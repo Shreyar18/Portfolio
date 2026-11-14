@@ -1,9 +1,8 @@
 /* ═════════════════════════════ TOKENS ═════════════════════════════ */
-/* Light is the default; [data-theme="dark"] on <html> flips every value.
-   Monochrome throughout — the "brand" is simply ink on paper, inverted. */
+/* Light only. Monochrome throughout — the "brand" is simply ink on paper. */
 :root {
-  --bg: #f7f7f5;
-  --bg-2: #f1f1ee;
+  --bg: #ffffff;
+  --bg-2: #f7f7f5;
   --surface: #ffffff;
   --surface-2: #f2f2ef;
   --surface-3: #e9e9e5;
@@ -55,47 +54,6 @@
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
-  --bg: #08090a;
-  --bg-2: #0c0d0e;
-  --surface: #0f1011;
-  --surface-2: #141517;
-  --surface-3: #1b1c1e;
-
-  --line: var(--fill-2);
-  --line-2: var(--fill-2);
-  --line-3: rgba(255, 255, 255, 0.24);
-
-  --text: #f7f8f8;
-  --body: #cfd2d6;
-  --muted: #8d9199;
-  --muted-2: #80848c;
-  --dim: #7e828a;
-
-  --brand: #f7f8f8;
-  --brand-hi: #ffffff;
-  --brand-soft: var(--fill-2);
-  --brand-glow: rgba(255, 255, 255, 0.22);
-  --on-brand: #08090a;
-
-  --fill: var(--fill);
-  --fill-2: var(--fill-2);
-  --glass: rgba(20, 21, 23, 0.82);
-  --glass-solid: rgba(14, 15, 17, 0.94);
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-
-  --dot: var(--fill-2);
-  --dot-rgb: 255, 255, 255;
-  --ambient: rgba(255, 255, 255, 0.07);
-
-  color-scheme: dark;
-}
-
-/* Theme swaps instantly: animating large blurred/translucent layers leaves
-   stale paint in Safari. Small controls keep their own transitions. */
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -209,31 +167,6 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
 .nav__resume svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s var(--ease); }
 .nav__resume:hover { background: var(--brand-hi); box-shadow: 0 12px 26px -12px var(--brand-glow); }
 .nav__resume:hover svg { transform: translateY(2px); }
-
-/* ─── Theme toggle ─── */
-.theme-toggle {
-  justify-self: end;
-  width: 38px; height: 36px; padding: 0;
-  display: grid; place-items: center;
-  border: 0; border-radius: var(--r-md);
-  background: var(--fill);
-  box-shadow: inset 0 0 0 1px var(--line);
-  color: var(--muted);
-  cursor: pointer;
-  transition: background-color .3s, color .3s, box-shadow .3s;
-}
-.theme-toggle:hover { background: var(--fill-2); color: var(--text); box-shadow: inset 0 0 0 1px var(--line-2); }
-.theme-toggle__track { position: relative; display: grid; place-items: center; width: 16px; height: 16px; overflow: hidden; }
-.theme-toggle svg {
-  grid-area: 1 / 1;
-  width: 16px; height: 16px;
-  fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
-  transition: transform .55s var(--ease), opacity .4s var(--ease);
-}
-/* light showing: sun in view, moon waiting below */
-.theme-toggle__moon { transform: translateY(130%) rotate(-40deg); opacity: 0; }
-:root[data-theme="dark"] .theme-toggle__sun { transform: translateY(-130%) rotate(40deg); opacity: 0; }
-:root[data-theme="dark"] .theme-toggle__moon { transform: none; opacity: 1; }
 
 /* ═════════════════════════════ HERO ═════════════════════════════ */
 .hero {

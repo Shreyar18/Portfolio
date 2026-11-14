@@ -14,9 +14,8 @@
   transition: width .12s linear;
 }
 
-/* ─── Banner — always the inverse of the page, in both themes ─── */
+/* ─── Banner — dark band, the inverse of the page ─── */
 :root { --banner-bg: #0c0d0f; --banner-text: #f7f8f8; --banner-muted: rgba(247, 248, 248, 0.66); }
-:root[data-theme="dark"] { --banner-bg: #141517; }
 
 .banner {
   position: relative;

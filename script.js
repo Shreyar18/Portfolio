@@ -1,26 +1,6 @@
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 
-// ── Theme toggle ──────────────────────────────────────────────
-const themeBtn = document.getElementById('themeToggle');
-const currentTheme = () =>
-  document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-if (themeBtn) {
-  const sync = () => themeBtn.setAttribute('aria-pressed', String(currentTheme() === 'dark'));
-  sync();
-  themeBtn.addEventListener('click', () => {
-    const next = currentTheme() === 'dark' ? 'light' : 'dark';
-    if (next === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    else document.documentElement.removeAttribute('data-theme');
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    sync();
-    // Safari keeps stale paint behind blurred/negative-z layers — nudge a repaint
-    const shade = document.querySelector('.hero__shade');
-    if (shade) { shade.style.opacity = '0.999'; requestAnimationFrame(() => { shade.style.opacity = ''; }); }
-    window.dispatchEvent(new CustomEvent('themechange', { detail: next }));
-  });
-}
-
 // ── Hero intro ────────────────────────────────────────────────
 const hero = document.querySelector('.hero');
 const heroReady = () => hero?.classList.add('is-ready');
@@ -83,7 +63,6 @@ if (clock) {
     dotRGB = (s.getPropertyValue('--dot-rgb') || dotRGB).trim();
   }
   readTheme();
-  window.addEventListener('themechange', () => { readTheme(); draw(); });
   let running = false;
   let inView = true;
   const mouse = { x: 0, y: 0, tx: 0, ty: 0, power: 0, target: 0 };

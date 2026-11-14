@@ -138,6 +138,9 @@
 .case__body { max-width: 760px; }
 .sec { scroll-margin-top: 110px; padding-bottom: clamp(48px, 6vw, 76px); }
 .sec + .sec { border-top: 1px solid var(--line); padding-top: clamp(40px, 5vw, 64px); }
+/* Unfinished parts carry `hidden` until their content exists */
+.case [hidden] { display: none !important; }
+.case__body > .sec[hidden]:first-child + .sec { border-top: 0; padding-top: 0; }
 .sec__title {
   margin: 0 0 24px;
   font-size: clamp(26px, 3vw, 36px);

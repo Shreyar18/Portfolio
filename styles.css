@@ -674,7 +674,7 @@ html:not(.js) .nav__tabs a.is-active { background: var(--text); color: var(--on-
   background: var(--brand-soft);
   box-shadow: inset 0 0 0 1px var(--line-3);
   font: 500 13.5px/1 var(--font); letter-spacing: -0.01em;
-  color: var(--on-brand);
+  color: var(--text);
   white-space: nowrap;
 }
 .soon__dot {

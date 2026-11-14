@@ -20,10 +20,10 @@
 (() => {
   const toc = document.getElementById('toc');
   if (!toc) return;
-  const links = [...toc.querySelectorAll('a')];
+  const links = [...toc.querySelectorAll('a:not([hidden])')];
   const sections = links
     .map(link => ({ link, el: document.querySelector(link.getAttribute('href')) }))
-    .filter(item => item.el);
+    .filter(item => item.el && !item.el.hidden);
   if (!sections.length) return;
 
   const setActive = link => {

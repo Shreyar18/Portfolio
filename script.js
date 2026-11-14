@@ -290,11 +290,14 @@ function countUp(el) {
   const pre = el.dataset.prefix || '';
   const suf = el.dataset.suffix || '';
   if (reduceMotion.matches || !end) return;
+  // Keep the exact figure: same decimals and thousands separator as the HTML (45.9%, 1,000)
+  const decimals = (el.dataset.count.split('.')[1] || '').length;
+  const fmt = new Intl.NumberFormat('en-IN', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
   const start = performance.now();
   const dur = 1300;
   const tick = now => {
     const p = Math.min((now - start) / dur, 1);
-    el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+    el.textContent = pre + fmt.format(p < 1 ? end * (1 - Math.pow(1 - p, 3)) : end) + suf;
     if (p < 1) requestAnimationFrame(tick);
   };
   requestAnimationFrame(tick);
